@@ -1,0 +1,27 @@
+<p>getmethod works!</p>
+
+<button (click)="gettingData()">get the date</button>
+
+
+
+<!-- my-component.component.html -->
+<div class="container">
+    <h2>User Data</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of user">
+          <td>{{ data.id }}</td>
+          <td>{{ data.title }}</td>
+          <td>{{ data.body }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
