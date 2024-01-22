@@ -47,6 +47,12 @@ export class HttpService{
  }
 
 
+ patch(num:number){
+    const sin=`${this.api}/${num}`
+    return this.http.patch(sin,{body:"sugumarakkuripp"},httpOptions)
+
+ }
+
 
 
 

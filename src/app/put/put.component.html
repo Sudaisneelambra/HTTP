@@ -6,6 +6,8 @@
 <button (click)="posting()">POST</button>
 
 
+
+
 <!-- my-component.component.html -->
 <div class="container">
     <h2>User Data</h2>
@@ -24,6 +26,7 @@
           <td>{{ data.body }}</td>
           <td><button (click)="clicking(data.userId,data.id,{title:'sudais',body:'neelambra'})">put</button></td>
           <td><button (click)="deleting(data.id)">delete</button></td>
+          <td><button (click)="patching(data.id)">PATCH</button></td>
         </tr>
       </tbody>
     </table>

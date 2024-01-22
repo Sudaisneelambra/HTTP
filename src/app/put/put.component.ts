@@ -61,14 +61,6 @@ user!:UserData[]
           this.user[length]=sin
           
         }, 3000);
-
-        
-      
-        // this.sin.getdata().subscribe({
-        //   next:(el)=>{
-        //     this.user=el
-        //   }
-        // })
       }
       
     })
@@ -81,6 +73,15 @@ user!:UserData[]
       next:(res)=>{
         console.log("user deleted",res);
         this.gettingData()
+        
+      }
+    })
+  }
+
+  patching(id:number){
+    this.sin.patch(id).subscribe({
+      next:(res)=>{
+        console.log(res);
         
       }
     })
