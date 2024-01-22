@@ -33,9 +33,13 @@ user!:UserData[]
         const index=this.user.findIndex((item)=>{
           return item.id===id
         })
+        console.log(index);
+        
 
         if(index !== -1)
         {
+          console.log(this.user[index]);
+          
           this.user[index]=res
         }
         // this.user=res
@@ -48,11 +52,23 @@ user!:UserData[]
     this.sin.postData().subscribe({
       next:(sin)=>{
         console.log(sin);
-        this.sin.getdata().subscribe({
-          next:(el)=>{
-            this.user=el
-          }
-        })
+       this.gettingData()
+       
+        setTimeout(() => {
+          console.log(this.user);
+          console.log(this.user.length);
+          const length=this.user.length
+          this.user[length]=sin
+          
+        }, 3000);
+
+        
+      
+        // this.sin.getdata().subscribe({
+        //   next:(el)=>{
+        //     this.user=el
+        //   }
+        // })
       }
       
     })
